@@ -3,12 +3,12 @@ import { useEffect } from 'react';
 import SpotifyWebApi from 'spotify-web-api-node';
 
 const spotifyApi = new SpotifyWebApi({
-    clientId: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
-})
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
+});
 
 const useSpotify = () => {
-  const { data: session, status } = useSession();
+  const { data: session, status }: any = useSession();
 
   useEffect(() => {
     if (session) {
@@ -23,4 +23,3 @@ const useSpotify = () => {
 };
 
 export default useSpotify;
- 
